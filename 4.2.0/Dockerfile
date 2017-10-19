@@ -6,8 +6,8 @@ ENV RQLITE_VERSION=4.2.0
 RUN apt-get update && \
     apt-get install -y curl && \
     curl -L https://github.com/rqlite/rqlite/releases/download/v${RQLITE_VERSION}/rqlited-v${RQLITE_VERSION}-linux-amd64.tar.gz -o rqlited-v${RQLITE_VERSION}-linux-amd64.tar.gz && \
-    tar xvfz rqlited-v${RQLITE_VERSION}-linux-amd64.tar.gz && \
-    cp rqlited-v${RQLITE_VERSION}-linux-amd64/rqlited /bin
+    tar xvfz rqlite-v${RQLITE_VERSION}-linux-amd64.tar.gz && \
+    cp rqlite-v${RQLITE_VERSION}-linux-amd64/rqlited /bin
 
 RUN mkdir -p /rqlite/file
 

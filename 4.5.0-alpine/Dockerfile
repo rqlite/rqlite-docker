@@ -52,6 +52,6 @@ VOLUME /rqlite/file
 # Expose Ports
 EXPOSE 4001 4002
 
-# ENTRYPOINT [ "docker-entrypoint.sh" ]
+ENTRYPOINT [ "docker-entrypoint.sh" ]
 
 CMD ["rqlited", "-http-addr", "0.0.0.0:4001", "-raft-addr", "0.0.0.0:4002", "/rqlite/file/data"]

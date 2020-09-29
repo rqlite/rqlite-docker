@@ -14,7 +14,7 @@ You can download the latest image via:
 ```
 Then start up a single node like so:
 ```
-    docker run -p 4001:4001 -p4002:4002 rqlite/rqlite
+    docker run -name=rqlite -p 4001:4001 -p4002:4002 rqlite/rqlite
 ```
 
 Instructions for clustering via Docker are forthcoming, but it should not be difficult for people with experience with Docker and networking.

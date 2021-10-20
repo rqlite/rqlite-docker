@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:focal
 MAINTAINER Philip O'Toole <philip.otoole@yahoo.com>
 
 ENV RQLITE_VERSION=6.6.1

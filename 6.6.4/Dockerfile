@@ -20,6 +20,4 @@ EXPOSE 4001 4002
 COPY docker-entrypoint.sh /bin/docker-entrypoint.sh
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-# This works fine for a single node, but if you wish to cluster you must also set -http-addr-adv
-# and -raft-addr-adv, so other nodes know how to contact this node.
-CMD ["rqlited", "-http-addr", "0.0.0.0:4001", "-raft-addr", "0.0.0.0:4002", "/rqlite/file/data"]
+CMD ["rqlite"]

@@ -3,18 +3,29 @@
 
 This is the Git repo for the [rqlite](https://github.com/rqlite/rqlite) Docker [image](https://hub.docker.com/r/rqlite/rqlite/).
 
+## Downloading latest image
 
-## rqlite
-rqlite is a distributed relational database, which uses SQLite as its storage engine. rqlite uses Raft to achieve consensus across all the instances of the SQLite databases, ensuring that every change made to the system is made to a quorum of SQLite databases, or none at all. It also gracefully handles leader elections, and tolerates failures of machines, including the leader. rqlite is available for Linux, OSX, and Microsoft Windows.
-
-## Getting rqlite
-You can download the latest image via:
-```
     docker pull rqlite/rqlite
-```
-Then start up a single node like so:
-```
-    docker run --name=rqlite -p 4001:4001 -p4002:4002 rqlite/rqlite
-```
 
-Instructions for clustering via Docker are forthcoming, but it should not be difficult for people with experience with Docker and networking.
+## Starting a single node
+
+    docker run rqlite/rqlite
+
+This will start a single node, connected to the default `bridge` network. The HTTP API will be available at `http://$IP:4001`. `$IP` is the address Docker assigns to your rqlite container, and will be displayed in the rqlite logs.
+
+### Passing extra options to rqlite
+rqlite supports many options, allowing you to control its behavior. To set an option simply append it your launch command. For example, to enable on-disk mode:
+
+    docker run rqlite/rqlite -on-disk
+
+You can see the full set of options via:
+
+    docker run rqlite/rqlite -help
+
+### Clustering
+
+    docker run rqlite/rqlite -join $IP:4001
+
+where `$IP` is the HTTP API IP address of the node you wish to join.
+
+See the [rqlite Docker page](https://hub.docker.com/r/rqlite/rqlite) for more details.

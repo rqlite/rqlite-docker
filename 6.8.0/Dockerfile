@@ -7,7 +7,7 @@ RUN apk update && \
     apk --no-cache add curl tar && \
     curl -L https://github.com/rqlite/rqlite/releases/download/v${RQLITE_VERSION}/rqlite-v${RQLITE_VERSION}-linux-amd64-musl.tar.gz -o rqlite-v${RQLITE_VERSION}-linux-amd64-musl.tar.gz && \
     tar xvfz rqlite-v${RQLITE_VERSION}-linux-amd64-musl.tar.gz && \
-    cp rqlite-v${RQLITE_VERSION}-linux-amd64-musl/rqlited /bin && \
+    cp rqlite-v${RQLITE_VERSION}-linux-amd64-musl/* /bin && \
     rm -fr rqlite-v${RQLITE_VERSION}-linux-amd64-musl rqlite-v${RQLITE_VERSION}-linux-amd64-musl.tar.gz && \
     apk del curl tar
 

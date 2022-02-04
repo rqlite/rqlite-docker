@@ -2,7 +2,7 @@
 set -e
 
 if [ -z "$NODE_ID" ]; then
-	node_id=`hostname`
+      NODE_ID=`hostname`
 fi
 
 hostname=`hostname -f`

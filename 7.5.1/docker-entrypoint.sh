@@ -23,7 +23,7 @@ if [ $? -eq 0 ]; then
 	http_addr="-http-addr $HTTP_ADDR"
 fi
 
-contains "-http-addr-adv" "$@"
+contains "-http-adv-addr" "$@"
 if [ $? -eq 0 ]; then
 	if [ -z "$HTTP_ADV_ADDR" ]; then
 		HTTP_ADV_ADDR=$DEFAULT_ADV_ADDRESS:4001

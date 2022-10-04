@@ -5,7 +5,7 @@ To build and push a new Docker image, of the release x.y.z, first create the cor
 ```
 export VERSION=x.y.z
 cd $VERSION
-docker build -t rqlite/rqlite:$VERSION .
+docker buildx -t rqlite/rqlite:$VERSION .
 docker push rqlite/rqlite:$VERSION
 ```
 To update the `latest` tag, execute the same instructions but pass `latest` instead `x.y.z`.

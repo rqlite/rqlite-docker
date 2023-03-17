@@ -1,7 +1,7 @@
 # About this repo 
 [![Google Group](https://img.shields.io/badge/Google%20Group--blue.svg)](https://groups.google.com/group/rqlite) [![Slack](https://img.shields.io/badge/Slack--purple.svg)](https://www.philipotoole.com/join-rqlite-slack)
 
-This is the Git repo for the [rqlite](https://github.com/rqlite/rqlite) Docker [image](https://hub.docker.com/r/rqlite/rqlite/).
+This is the Git repo for the [rqlite](https://rqlite.io) Docker [image](https://hub.docker.com/r/rqlite/rqlite/).
 
 ## Downloading latest image
 

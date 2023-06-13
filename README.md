@@ -11,7 +11,9 @@ This is the Git repo for the [rqlite](https://rqlite.io) Docker [image](https://
 
     docker run rqlite/rqlite
 
-This will start a single node, connected to the default `bridge` network. The HTTP API will be available at `http://$IP:4001`. `$IP` is the address Docker assigns to your rqlite container, and will be displayed in the rqlite logs.
+This will start a single node, connected to the default `bridge` network. The HTTP API will be available at `http://$IP:4001`. `$IP` is the address Docker assigns to your rqlite container, and will be displayed in the rqlite logs. For convenience you might like to make rqlite available on localhost by passing `-p4001:4001` to the `run` command.
+
+    docker run -p4001:4001 rqlite/rqlite
 
 ### Passing extra options to rqlite
 rqlite supports many options, allowing you to control its behavior. To set an option simply append it your launch command. For example, to enable on-disk mode:

@@ -16,9 +16,9 @@ This will start a single node, connected to the default `bridge` network. The HT
     docker run -p4001:4001 rqlite/rqlite
 
 ### Passing extra options to rqlite
-rqlite supports many options, allowing you to control its behavior. To set an option simply append it your launch command. For example, to enable on-disk mode:
+rqlite supports many options, allowing you to control its behavior. To set an option simply append it your launch command. For example, to explicitl set the path to the SQLite database file:
 
-    docker run rqlite/rqlite -on-disk
+    docker run rqlite/rqlite -on-disk-path=/root/mydb.sqlite3
 
 You can see the full set of options via:
 
@@ -26,8 +26,8 @@ You can see the full set of options via:
 
 ### Clustering
 
-    docker run rqlite/rqlite -join $IP:4001
+    docker run rqlite/rqlite -join $IP:4002
 
-where `$IP` is the HTTP API IP address of the node you wish to join.
+where `$IP` is the Raft IP address of the node you wish to join.
 
-See the [rqlite Docker page](https://hub.docker.com/r/rqlite/rqlite) for more details.
+See the [clustering guide](https://rqlite.io/docs/clustering/) for more details on creating and managing rqlite clusters.

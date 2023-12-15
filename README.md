@@ -16,7 +16,7 @@ This will start a single node, connected to the default `bridge` network. The HT
     docker run -p4001:4001 rqlite/rqlite
 
 ### Passing extra options to rqlite
-rqlite supports many options, allowing you to control its behavior. To set an option simply append it your launch command. For example, to explicitl set the path to the SQLite database file:
+rqlite supports many options, allowing you to control its behavior. To set an option simply append it your launch command. For example, to explicitly set the path to the SQLite database file:
 
     docker run rqlite/rqlite -on-disk-path=/root/mydb.sqlite3
 

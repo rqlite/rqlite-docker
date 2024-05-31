@@ -1,4 +1,6 @@
-# About this repo 
+# About this repo
+> This repo is obsolete. Docker images are now created via GitHub actions in the [rqlite repository](https://github.com/rqlite/rqlite).
+
 [![Google Group](https://img.shields.io/badge/Google%20Group--blue.svg)](https://groups.google.com/group/rqlite) [![Slack](https://img.shields.io/badge/Slack--purple.svg)](https://www.philipotoole.com/join-rqlite-slack)
 
 This is the Git repo for the [rqlite](https://rqlite.io) Docker [image](https://hub.docker.com/r/rqlite/rqlite/). Check the Dockerfile within each directory to learn which [rqlite release](https://github.com/rqlite/rqlite/releases), and architecture, the Docker image uses. If you build your own rqlite container, you may need to use a different release than that referenced in the Dockerfile.
